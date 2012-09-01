@@ -1,0 +1,10 @@
+.slidable {
+	}
+
+	.tall {
+		overflow: hidden;
+		}
+
+	.controller {
+		cursor: pointer;
+		}
