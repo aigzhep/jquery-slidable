@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>jQuery Slidable by qvit</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>jQuery Slidable</h1>
+        <p>Easy-to-use plugin that makes much too tall blocks pretty and handy</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/qvit/jquery-slidable" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/qvit/jquery-slidable/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/qvit/jquery-slidable/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h2>Getting started</h2>
+
+<p>To use the plugin, include the <a href="http://jquery.com">jQuery</a> library, the slidable source file and the stylesheet file inside the <code>&lt;head&gt;</code> tag of your HTML document:</p>
+
+<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"/path/to/slidable.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"/path/to/slidable.css"</span> <span class="nt">/&gt;</span>
+</pre></div>
+
+<p>Slidable expects a very basic HTML markup structure inside your HTML document:</p>
+
+<div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slidable"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tall"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>To setup Slidable, add the following code inside the <code>&lt;head&gt;</code> tag of your HTML document:</p>
+
+<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+    <span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">'.slidable'</span><span class="p">).</span><span class="nx">slidable</span><span class="p">({</span>
+            <span class="c1">// Configuration goes here</span>
+        <span class="p">});</span>
+    <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre></div>
+
+<h2>Configuration</h2>
+
+<p>Slidable accepts a tiny list of options:</p>
+
+<table>
+<tr>
+<th>Property</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+    </tr>
+<tr>
+<td>minimized</td>
+        <td>integer</td>
+        <td>200</td>
+        <td>Minimal height in pixels for tall blocks</td>
+    </tr>
+<tr>
+<td>controls</td>
+        <td>array</td>
+        <td>["Show", "Hide"]</td>
+        <td>Controller text in minimized and maximized state, respectively</td>
+    </tr>
+</table>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/qvit">qvit</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
