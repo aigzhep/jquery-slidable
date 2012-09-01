@@ -5,68 +5,10 @@
 	<link rel="stylesheet" type="text/css" href="css/slidable.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="js/jquery.min.js"></script>
+	<script src="js/slidable.js"></script>
 	<script type="text/javascript">
 		$(function() {
-			var minimized = 210;
-			var controller_html = '<div class="controller more"><span>Show</span></div>';
-
-			function noHeightData(block) {
-				return !$(block).data('height');
-			}
-
-			function controllerAction() {
-				var block = $(this).siblings('.tall');
-				var new_height = $(this).hasClass('more') ? block.data('height') : minimized;
-				block.animate({
-					height: new_height
-				}, 500);
-				switchDirection(this);
-			}
-
-			function handleClick(controller) {
-				$(controller).on('click', controllerAction);
-			}
-
-			function setHeight(slidable) {
-				$(slidable).children('.tall').each(function() {
-					var block = this,
-						height = block.clientHeight;
-					if (noHeightData(block) && height > minimized) {
-						$(block).after(controller_html);
-						var controller = $(slidable).children('.controller');
-						handleClick(controller);
-						$(block).data('height', height);
-						$(block).height(minimized);
-					}
-				});
-			}
-
-			function switchDirection(controller) {
-				var text = '<span>' +
-								($(controller).hasClass('more') ? 'Hide' : 'Show') +
-							'</span>';
-				setTimeout(function() {
-					$(controller).html(text);
-					$(controller).toggleClass('more');
-					$(controller).toggleClass('less');
-				}, 500);
-			}
-
-			setHeight($('.slidable'));
-
-			function switchState(tab, content) {
-				$(tab).toggleClass('active');
-				$(content).toggleClass('active');
-			}
-
-			$('.door-tech .tab').not('active').click(function() {
-				var active_tab = $('.door-tech .tab.active');
-				var active_content = $('.door-tech .content.active');
-				var activate = "#content-" + $(this)[0].id.slice(4);
-				switchState(active_tab, active_content);
-				switchState(this, activate);
-				setHeight(activate);
-			});
+			$('.slidable').slidable();
 		});
 	</script>
 	<title>jQuery Slidable Demo</title>
