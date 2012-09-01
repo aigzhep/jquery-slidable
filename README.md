@@ -37,7 +37,7 @@ To setup Slidable, add the following code inside the `<head>` tag of your HTML d
 Configuration
 -------------
 
-jCarousel accepts a list of options to control the behaviour of the carousel. Here is the list of options you may set:
+Slidable accepts a tiny list of options:
 
 <table>
 	<tr>
