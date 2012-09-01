@@ -45,7 +45,7 @@
 
 		function switchDirection(controller) {
 			var text = '<span>' +
-				($(controller).hasClass('more') ? options.controls[1] : options.controls[1]) +
+				($(controller).hasClass('more') ? options.controls[1] : options.controls[0]) +
 			'</span>';
 			setTimeout(function() {
 				$(controller).html(text);
