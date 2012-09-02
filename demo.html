@@ -5,10 +5,13 @@
 	<link rel="stylesheet" type="text/css" href="css/slidable.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="js/jquery.min.js"></script>
-	<script src="js/slidable.js"></script>
+	<script src="js/slidable.min.js"></script>
 	<script type="text/javascript">
 		$(function() {
-			$('.slidable').slidable();
+			$('.slidable').slidable({
+				minimal: 210,
+				controls: ["▼ Show", "▲ Hide"]
+			});
 		});
 	</script>
 	<title>jQuery Slidable Demo</title>

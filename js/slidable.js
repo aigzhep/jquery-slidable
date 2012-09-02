@@ -1,7 +1,13 @@
+/*	jQuery Slidable plugin
+
+	Victor Smirnov © 2012
+*/
+
 (function($) {
 	var defaults = {
-		minimized: 200,
-		controls: ["Show", "Hide"]
+		minimal: 200,
+		controls: ["Show", "Hide"],
+		speed: 500
 	};
 
 	var options;
@@ -16,46 +22,44 @@
 			return !$(block).data('height');
 		}
 
+		function switchController(controller) {
+			var text = $(controller).hasClass('more') ? options.controls[1] : options.controls[0];
+			setTimeout(function() {
+				$(controller).html("<span>" + text + "</span>");
+				$(controller).toggleClass('more');
+				$(controller).toggleClass('less');
+			}, options.speed);
+		}
+
 		function controllerAction() {
-			var block = $(this).siblings('.tall');
-			var new_height = $(this).hasClass('more') ? block.data('height') : options.minimized;
+			var self = this;
+			var block = $(self).siblings('.tall');
+			var new_height = $(self).hasClass('more') ? block.data('height') : options.minimal;
 			block.animate({
 				height: new_height
-			}, 500);
-			switchDirection(this);
+			}, options.speed, switchController(self));
 		}
 
 		function handleClick(controller) {
 			$(controller).on('click', controllerAction);
 		}
 
-		function setHeight(slidable) {
-			$(slidable).children('.tall').each(function() {
+		function init(slidable) {
+			$(slidable).find('.tall').each(function() {
 				var block = this,
 					height = block.clientHeight;
-				if (noHeightData(block) && height > options.minimized) {
+				if (noHeightData(block) && height > options.minimal) {
 					$(block).after(controller_html);
-					var controller = $(slidable).children('.controller');
+					var controller = $(slidable).find('.controller');
 					handleClick(controller);
 					$(block).data('height', height);
-					$(block).height(options.minimized);
+					$(block).height(options.minimal);
 				}
 			});
 		}
 
-		function switchDirection(controller) {
-			var text = '<span>' +
-				($(controller).hasClass('more') ? options.controls[1] : options.controls[0]) +
-			'</span>';
-			setTimeout(function() {
-				$(controller).html(text);
-				$(controller).toggleClass('more');
-				$(controller).toggleClass('less');
-			}, 500);
-		}
-
 		this.each(function() {
-			setHeight(this);
+			init(this);
 		});
 
 		return this;

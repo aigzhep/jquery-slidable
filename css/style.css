@@ -44,7 +44,22 @@ h1 {
 		margin: 0 auto;
 		}
 
+		#example .controller {
+			border-top: solid #666 1px;
+			}
+
+			#example .controller span {
+				float: right;
+				background: #FFF;
+				border: solid #666 1px;
+				border-top: 0;
+				margin-top: -1px;
+				width: 68px;
+				padding: 2px 4px;
+				}
+
 #push {
+	clear: both;
 	height: 47px;
 	}
 

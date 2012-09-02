@@ -10,7 +10,7 @@ To use the plugin, include the [jQuery](http://jquery.com) library, the slidable
 
 ```html
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-<script type="text/javascript" src="/path/to/slidable.js"></script>
+<script type="text/javascript" src="/path/to/slidable.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/path/to/slidable.css" />
 ```
 
@@ -18,7 +18,9 @@ Slidable expects a very basic HTML markup structure inside your HTML document:
 
 ```html
 <div class="slidable">
-	<div class="tall"></div>
+	<div class="tall">
+		<!-- Put plenty of content here -->
+	</div>
 </div>
 ```
 
@@ -47,7 +49,7 @@ Slidable accepts a tiny list of options:
 		<th>Description</th>
 	</tr>
 	<tr>
-		<td>minimized</td>
+		<td>minimal</td>
 		<td>integer</td>
 		<td>200</td>
 		<td>Minimal height in pixels for tall blocks</td>
@@ -57,5 +59,11 @@ Slidable accepts a tiny list of options:
 		<td>array</td>
 		<td>["Show", "Hide"]</td>
 		<td>Controller text in minimized and maximized state, respectively</td>
+	</tr>
+	<tr>
+		<td>speed</td>
+		<td>integer</td>
+		<td>500</td>
+		<td>Slide speed in milliseconds</td>
 	</tr>
 </table>
