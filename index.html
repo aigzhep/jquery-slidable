@@ -44,14 +44,16 @@
 <p>To use the plugin, include the <a href="http://jquery.com">jQuery</a> library, the slidable source file and the stylesheet file inside the <code>&lt;head&gt;</code> tag of your HTML document:</p>
 
 <div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"/path/to/slidable.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"/path/to/slidable.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"/path/to/slidable.css"</span> <span class="nt">/&gt;</span>
 </pre></div>
 
 <p>Slidable expects a very basic HTML markup structure inside your HTML document:</p>
 
 <div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slidable"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tall"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tall"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- Put plenty of content here --&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </pre></div>
 
@@ -78,7 +80,7 @@
         <th>Description</th>
     </tr>
 <tr>
-<td>minimized</td>
+<td>minimal</td>
         <td>integer</td>
         <td>200</td>
         <td>Minimal height in pixels for tall blocks</td>
@@ -88,6 +90,12 @@
         <td>array</td>
         <td>["Show", "Hide"]</td>
         <td>Controller text in minimized and maximized state, respectively</td>
+    </tr>
+<tr>
+<td>speed</td>
+        <td>integer</td>
+        <td>500</td>
+        <td>Slide speed in milliseconds</td>
     </tr>
 </table>
       </section>
