@@ -3,6 +3,11 @@ jQuery Slidable Plugin
 
 Slidable is an easy-to-use plugin that makes much too tall blocks pretty and handy.
 
+Requirements
+------------
+Slidable requires [jQuery](http://jquery.com/download/) library version 1.7 or higher.
+
+
 Getting started
 ---------------
 
