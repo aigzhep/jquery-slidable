@@ -1,0 +1,25 @@
+{
+  "name": "slidable",
+  "version": "0.1.0",
+  "title": "jQuery Slidable",
+  "author": {
+    "name": "Victor Smirnov",
+    "url": "http://qvit.pro"
+  },
+  "licenses": [
+    {
+      "type": "GPLv3"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">1.7"
+  },
+  "description": "jQuery plugin for displaying much too tall blocks.",
+  "keywords": [
+    "layout",
+    "usability"
+  ],
+  "homepage": "https://github.com/qvit/jquery-slidable",
+  "docs": "https://github.com/qvit/jquery-slidable#readme",
+  "download": "https://github.com/qvit/jquery-slidable/archive/master.zip"
+}
